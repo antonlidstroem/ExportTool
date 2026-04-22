@@ -12,8 +12,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const notify = useCallback((message: string, type: Notification['type']) => {
-    const id = `n-${Date.now()}`;
-    dispatch({ type: 'ADD_NOTIFICATION', payload: { message, type } });
+    const id = `n-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
+    const notification: Notification = { id, message, type };
+    dispatch({ type: 'ADD_NOTIFICATION', payload: notification });
     setTimeout(() => dispatch({ type: 'REMOVE_NOTIFICATION', payload: id }), 5000);
   }, []);
 
@@ -22,12 +23,12 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   return (
-    <AppContext.Provider value={{ 
-      state, 
-      navigate, 
-      notify, 
-      dismissNotification, 
-      dispatch 
+    <AppContext.Provider value={{
+      state,
+      navigate,
+      notify,
+      dismissNotification,
+      dispatch,
     }}>
       {children}
     </AppContext.Provider>

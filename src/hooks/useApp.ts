@@ -3,7 +3,7 @@ import { AppContext } from '../context/AppContext';
 import type { AppContextType } from '../context/AppContext';
 
 /**
- * Custom hook för att komma åt NexCorp HR-context.
+ * Custom hook för att komma åt Lidstroem HR-context.
  * Kastar ett fel om den används utanför en AppProvider.
  */
 export const useApp = (): AppContextType => {
