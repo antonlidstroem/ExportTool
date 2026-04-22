@@ -1,6 +1,7 @@
 import { useApp } from '../hooks/useApp';
 import { TOOLS } from '../data/mockData';
 import type { Tool, Page } from '../types';
+import logoUrl from '../assets/vite.svg';
 
 export const Sidebar = () => {
   const { state, navigate } = useApp();
@@ -13,9 +14,26 @@ export const Sidebar = () => {
 
   return (
     <nav className="sidebar">
-      <div className="sidebar-logo">
-        <div className="sidebar-logo-mark">// LIDSTROEM</div>
-        <div className="sidebar-logo-title">Export<br/>Decision Tool</div>
+      <div className="sidebar-logo" style={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'center',    // Centers image and text-div horizontally
+        textAlign: 'center',      // Centers the text lines themselves
+        gap: '12px',
+        paddingBottom: '20px'
+      }}>
+        <img 
+          src={logoUrl} 
+          alt="Logo" 
+          style={{ width: '32px', height: '32px', flexShrink: 0 }} 
+        />
+        
+        <div>
+          
+          <div className="sidebar-logo-title" style={{ lineHeight: '1.2' }}>
+            Export<br/>Decision Tool
+          </div>
+        </div>
       </div>
       <div className="sidebar-nav">
         <div className="sidebar-section-label">Main</div>
