@@ -16,7 +16,7 @@ export interface AppState {
 
 export type Action =
   | { type: 'SET_PAGE'; payload: Page }
-  | { type: 'ADD_NOTIFICATION'; payload: Omit<Notification, 'id'> }
+  | { type: 'ADD_NOTIFICATION'; payload: Notification }
   | { type: 'REMOVE_NOTIFICATION'; payload: string }
   | { type: 'SET_PLAYGROUND_TOOL'; payload: string }
   | { type: 'SET_PLAYGROUND_DATASET'; payload: string }
@@ -34,11 +34,9 @@ export function appReducer(state: AppState, action: Action): AppState {
   switch (action.type) {
     case 'SET_PAGE':
       return { ...state, activePage: action.payload };
-    case 'ADD_NOTIFICATION': {
-      // Måsvingar här fixar "lexical declaration" felet
-      const id = `n-${Date.now()}`;
-      return { ...state, notifications: [...state.notifications, { ...action.payload, id }] };
-    }
+    case 'ADD_NOTIFICATION':
+      // Keep at most 4 notifications
+      return { ...state, notifications: [...state.notifications.slice(-3), action.payload] };
     case 'REMOVE_NOTIFICATION':
       return { ...state, notifications: state.notifications.filter(n => n.id !== action.payload) };
     case 'SET_PLAYGROUND_TOOL':

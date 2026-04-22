@@ -9,16 +9,27 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-
   "dependencies": {
+    "@syncfusion/ej2-base": "^33.2.3",
+    "@syncfusion/ej2-data": "^33.2.3",
+    "@syncfusion/ej2-excel-export": "^33.2.3",
+    "@syncfusion/ej2-pdf-export": "^33.2.3",
+    "@syncfusion/ej2-react-grids": "^33.2.3",
+    "bootstrap": "^5.3.3",
+    "devextreme": "^25.2.6",
+    "devextreme-react": "^25.2.6",
+    "exceljs": "^4.4.0",
+    "file-saver": "^2.0.5",
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.7",
+    "pptxgenjs": "^4.0.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "recharts": "^3.0.0", 
-    "bootstrap": "^5.3.3"
-
+    "recharts": "^3.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^24.12.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
