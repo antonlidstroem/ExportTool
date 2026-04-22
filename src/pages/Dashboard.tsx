@@ -60,7 +60,7 @@ export const Dashboard = () => {
     <div>
       <div className="page-header">
         <div className="page-eyebrow">Decision Support Tool</div>
-        <h1 className="page-title">HR Export Library <em>Evaluation</em></h1>
+        <h1 className="page-title">Export Tools Library <em>Evaluation</em></h1>
         <p className="page-subtitle">
           Compare Syncfusion, jsreport, Telerik Kendo UI, DevExpress, and Playwright for HR data export.
           Three libraries have live interactive demos — use the sidebar to explore each one.

@@ -15,7 +15,7 @@ export const Sidebar = () => {
     <nav className="sidebar">
       <div className="sidebar-logo">
         <div className="sidebar-logo-mark">// LIDSTROEM</div>
-        <div className="sidebar-logo-title">HR Export<br/>Decision Tool</div>
+        <div className="sidebar-logo-title">Export<br/>Decision Tool</div>
       </div>
       <div className="sidebar-nav">
         <div className="sidebar-section-label">Main</div>
